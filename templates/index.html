@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T306 Dev | {{title}}</title>
+  <link href="/static/style.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+  <div>
+    <script src="/static/script.js"></script>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="{{ url_for('home') }}">Home</a>
+  <a href="{{ url_for('projects') }}">Projects</a>
+  <a href="https://school.t306.dev">School</a>
+  <a href="{{ url_for('about') }}">About</a>
+  <a href="{{ url_for('donate') }}">Donate</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; <span style='color: #0693d0;font-family:Permanent Marker;'>{{title}}</span></span>
+  </div>
+</body>
