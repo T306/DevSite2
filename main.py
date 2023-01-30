@@ -1,13 +1,7 @@
-import firebase_admin
 import os
 from flask import Flask,render_template,url_for,send_from_directory
-from firebase_admin import credentials, firestore, initialize_app
 
 app = Flask(__name__)
-
-# Init Firebase DB
-cred = credentials.Certificate(os.environ['potato'])
-firebase_admin.initialize_app(cred)
 
 
 @app.route('/favicon.ico')
