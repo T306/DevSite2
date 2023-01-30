@@ -19,6 +19,9 @@ def donate():
 @app.route('/projects')
 def projects():
     return render_template('pages/projects.html', title='Projects')
+@app.route('/blog')
+def blogs():
+    return render_template('pages/blogs.html', title='Blog')
   
                 ### Errors ###
 
