@@ -6,6 +6,12 @@
       <div class="blog">
         <h1>Under Construction</h1>
         <p>Random streams of consciousness that I decide to share with the world.</p>
+        {% for page in flatpages %}
+        <a href="/blogs/{{ page.path }}"><h2>{{ page.title }}</h2></a>
+        <p>{{ page.description }}</p>
+        <p>{{ page.date }}</p>
+        <hr>
+        {% endfor %}
       </div>
     {% endblock %}
 </body>

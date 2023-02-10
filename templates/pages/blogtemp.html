@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    {% extends "index.html" %}
+    {% block content %}
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.html|safe }}<p>
+        <strong>{{ page.author }}</strong> {{ page.date }}</span>
+    {% endblock %}
+  </body>
+  <!--Replit Badge-->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</html>
