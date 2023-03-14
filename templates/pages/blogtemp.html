@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <link href="/static/blogs.css" rel="stylesheet" type="text/css" />
   <body>
     {% extends "index.html" %}
     {% block content %}
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.html|safe }}<p>
-        <strong>{{ page.author }}</strong> {{ page.date }}</span>
+    <div class="posts">
+          <h1>{{ page.title }}</h1>
+          <p>{{ page.html|safe }}<p>
+          <strong>{{ page.author }}</strong> {{ page.date }}</span>
+    </div>
     {% endblock %}
   </body>
-  <!--Replit Badge-->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+  <!--Replit Badge
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> -->
 </html>

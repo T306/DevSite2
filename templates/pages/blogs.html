@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
+  <link href="/static/blogs.css" rel="stylesheet" type="text/css" />
   <body>
     {% extends "index.html" %}
     {% block content %}
-      <div class="blog">
-        <h1>Under Construction</h1>
-        <p>Random streams of consciousness that I decide to share with the world.</p>
+      <h1>Under Construction</h1>
+      <p>Random streams of consciousness that I decide to share with the world.</p>
+      <div class="row row-cols-1 row-cols-md-4 g-2">
+        <div class='col'>
         {% for page in flatpages %}
-        <a href="/blogs/{{ page.path }}"><h2>{{ page.title }}</h2></a>
-        <p>{{ page.description }}</p>
-        <p>{{ page.date }}</p>
-        <hr>
+            <div class="card text-bg-dark border-info" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-center">{{ page.title }}</h5>
+                <p class='card-text'>{{ page.description }}</p>
+                <a href="/blogs/{{ page.path }}" class="card-link">Read</a>
+                <a class="card-link">{{ page.date }}</a>
+              </div>
+            </div>
+            {% if loop.index is divisibleby(4) and not loop.last %}
+              </div>
+            {% endif %}
+          </div>
         {% endfor %}
       </div>
     {% endblock %}
-</body>
-  <!--Replit Badge-->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body> 
 </html>
