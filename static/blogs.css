@@ -1,0 +1,12 @@
+.card-body a{
+  color: #fff;
+}
+.card-body a:hover {
+  color: #0693d0;
+}
+.card-body a:visited {
+  color:#528398;
+}
+.card-body p {
+  font-size: 1.1em;
+}

@@ -8,8 +8,8 @@ html, body {
   background-color: #464646;
   font-family: 'Ubuntu', sans-serif;
 }
-.home{
-  
+.blogs a:hover {
+  color: #0693d0;
 }
 /* The side navigation menu */
 .sidenav {
